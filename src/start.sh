@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+echo "Symlinking files from Network Volume"
+rm -rf /workspace && \
+  ln -s /runpod-volume /workspace
 
 # Use libtcmalloc for better memory management
 TCMALLOC="$(ldconfig -p | grep -Po "libtcmalloc.so.\d" | head -n 1)"
